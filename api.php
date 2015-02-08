@@ -15,7 +15,7 @@ if(!isset($_GET['user'])) { $user = crypt(time()); } else{
       echo exec("perl client.pl {$_GET['user']} stop");
       echo "Stopped";
     } else{
-      echo exec("perl client.pl {$_GET['user']} {$_GET['method']} {$_GET['host']} {$_GET['port']} {$_GET['time']}");
+      echo exec("perl client.pl '{$_GET['user']} {$_GET['method']} {$_GET['host']} {$_GET['port']} {$_GET['time']}'");
       echo "Sent; Ran ''";
     }
   } else {
